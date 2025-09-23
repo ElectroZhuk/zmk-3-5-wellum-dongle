@@ -80,7 +80,7 @@
 };
 
 / {
-    chosen { zmk,matrix_transform = &five_column_transform; };
+    chosen { zmk,matrix_transform = &default_transform ; };
 
 /* Use this instead for 3x6 form factor:
     chosen { zmk,matrix_transform = &default_transform; }; */
