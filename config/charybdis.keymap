@@ -160,14 +160,21 @@
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         x-invert;
-        bindings = <&ib_wheel_scaler 1 16>;
+        bindings = <&ib_horizontal_wheel_scaler 1 16 &ib_vertical_wheel_scaler 1 16>;
     };
 
-    ib_wheel_scaler: ib_wheel_scaler {
+    ib_horizontal_wheel_scaler: ib_horizontal_wheel_scaler {
         compatible = "zmk,input-behavior-scaler";
         #binding-cells = <2>;
         evt-type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+        input-code = <INPUT_REL_HWHEEL>;
+    };
+
+    ib_vertical_wheel_scaler: ib_vertical_wheel_scaler {
+        compatible = "zmk,input-behavior-scaler";
+        #binding-cells = <2>;
+        evt-type = <INPUT_EV_REL>;
+        input-code = <INPUT_REL_WHEEL>;
     };
 
     behaviors {
