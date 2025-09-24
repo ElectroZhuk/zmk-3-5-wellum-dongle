@@ -160,7 +160,14 @@
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         x-invert;
-        bindings = <&zip_scroll_scaler 1 16>;
+        bindings = <&ib_wheel_scaler 1 16>;
+    };
+
+    ib_wheel_scaler: ib_wheel_scaler {
+        compatible = "zmk,input-behavior-scaler";
+        #binding-cells = <2>;
+        evt-type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
     };
 
     behaviors {
