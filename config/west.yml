@@ -5,6 +5,8 @@ manifest:
     - name: badjeff
       url-base: https://github.com/badjeff
     - name: badjeff
+      url-base: https://github.com/badjeff
+    - name: electrozhuk
       url-base: https://github.com/ElectroZhuk
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
@@ -14,7 +16,7 @@ manifest:
       revision: feat/pointers-move-scroll
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: badjeff
+      remote: electrozhuk
       revision: main
     - name: zmk-split-peripheral-input-relay
       remote: badjeff
