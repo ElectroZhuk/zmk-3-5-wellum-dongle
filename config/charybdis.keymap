@@ -167,6 +167,14 @@
         input-code = <INPUT_REL_WHEEL>;
     };
 
+    : selectusb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_USB>
+                ;
+        };
+
     behaviors {
         MACRO_ONE_PARAM(
             m_release_key_twice,
@@ -276,6 +284,17 @@
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
         };
+
+        MACRO_NO_PARAM(
+            sel_usb,
+            &out OUT_USB
+        )
+
+        MACRO_ONE_PARAM(
+            sel_ble,
+            &bt BT_SEL PARAM_1,
+            &out OUT_BLE
+        )
     };
 
     conditional_layers {
@@ -311,7 +330,7 @@ _ LCTRL      _ Z          _ X          _ C         _ V             ___          
 
         gfn_layer {
             bindings = <
-_ N5         _ N1         _ N2         _ N3        _ N4            _ KP_NUM     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR_ALL
+_ N5         _ N1         _ N2         _ N3        _ N4            &sel_usb     &sel_ble 0   &sel_ble 1  &sel_ble 2   &bt BT_CLR_ALL
 _ N0         _ N6         _ N7         _ N8        _ N9            ___          ___          ___          ___          ___
 _ G          _ J          _ I          _ M         _ T             ___          ___          ___          &sys_reset   &bootloader
                           _ ESC        _ RET       ______          ______       ______       
