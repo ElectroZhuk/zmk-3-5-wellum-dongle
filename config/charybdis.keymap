@@ -167,14 +167,6 @@
         input-code = <INPUT_REL_WHEEL>;
     };
 
-    : selectusb {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_USB>
-                ;
-        };
-
     behaviors {
         MACRO_ONE_PARAM(
             m_release_key_twice,
