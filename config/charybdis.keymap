@@ -292,7 +292,7 @@
 
         MACRO_ONE_PARAM(
             sel_ble,
-            &bt BT_SEL PARAM_1,
+            &bt BT_SEL PARAM_1
             &out OUT_BLE
         )
     };
